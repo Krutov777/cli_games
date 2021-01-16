@@ -1,13 +1,8 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 from brain_games import cli
 
 
-def greet(where):
-    print('Welcome {}!'.format(where))
-
-
 def main():
-    greet('to the Brain Games')
     cli.welcome_user()
 
 

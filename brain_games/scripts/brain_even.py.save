@@ -1,0 +1,10 @@
+import pormpt
+
+def even_odd():
+    print('Answer "yes" if the number is even, otherwise answer "no".')
+    counter_iter = 0
+    while counter_iter <= 3:
+	  number = Your answer: 
+   	  print('Question: {}'.format(random.randit(1,100)))
+          answer_input = prompt.string('Your answer: ')
+          if
