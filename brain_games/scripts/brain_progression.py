@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
-from brain_games.cli import welcome_user
-from brain_games.progression import arithmetic_progression
+
+from brain_games.greeting import welcome_user
+from brain_games.games.progression import check_progression
+from brain_games.game_engine import check_answer
 
 
 def main():
     name = welcome_user()
-    arithmetic_progression(name)
+    print('What number is missing in the progression?')
+    check_answer(check_progression, name)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
