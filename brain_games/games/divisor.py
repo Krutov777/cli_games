@@ -5,6 +5,11 @@ import math
 
 
 def check_gcd():
+    """
+    Generates two random integers and finds the greatest
+    common divisor of generated integers.
+    :return: gcd and integers
+    """
     number_1 = random.randint(1, 100)
     number_2 = random.randint(1, 100)
     expression = f"{number_1} {number_2}"
