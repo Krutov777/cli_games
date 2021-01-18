@@ -20,7 +20,8 @@ def present_number(name):
             print('Correct!')
             counter_input += 1
         else:
-            print("{} is wrong answer ;(. Let's try again, {}!".format(answer, name))
+            print("{} is wrong answer ;(.".format(answer))
+            print(" Let's try again, {}!".format(name))
             break
     if counter_input == 3:
         print('Congratulations, {}!'.format(name))

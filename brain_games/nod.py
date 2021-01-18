@@ -2,6 +2,7 @@
 import random
 import prompt
 
+
 def nod(name):
     number1 = 1
     number2 = 1
@@ -15,14 +16,16 @@ def nod(name):
             if number1 > number2:
                 number1 %= number2
             else:
-                number2 %= number1      
+                number2 %= number1
         nod = number1 + number2
         answer = prompt.string('Your answer: ')
         if int(answer) == nod:
             print('correct')
             counter_input += 1
         else:
-            print("{} is wrong answer ;(. Correct answer was {}.Let's try again, {}!.".format(answer, nod, name))
+            print("{} is wrong answer ;(.".format(answer))
+            print(" Correct answer was {}.".format(nod))
+            print(" Let's try again, {}!.".format(name))
             break
     if counter_input == 3:
         print('Congratulations, {}!'.format(name))

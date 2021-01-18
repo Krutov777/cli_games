@@ -8,13 +8,13 @@ def arithmetic_progression(name):
     lenght = 10
     print('What number is missing in the progression?')
     while counter_input < 3:
-        step = random.randint(1,10)
+        step = random.randint(1, 10)
         lst = []
-        number = random.randint(1,100)
+        number = random.randint(1, 100)
         while len(lst) < lenght:
             lst.append(str(number))
             number += step
-        random_index = random.randrange(0,len(lst))
+        random_index = random.randrange(0, len(lst))
         secret_number = lst[random_index]
         lst[random_index] = '..'
         lst = ' '.join(lst)
@@ -24,7 +24,10 @@ def arithmetic_progression(name):
             print('correct')
             counter_input += 1
         else:
-            print("{} is wrong answer ;(. Correct answer was {}.Let's try again, {}!".format(answer, secret_number, name))
+            answer = answer + " is wrong answer ;(. "
+            secret_number = "Correct answer was " + secret_number
+            print(answer + secret_number)
+            print("Let's try again, {}!".format(name))
             break
     if counter_input == 3:
-        print('Congratulations, {}!'.format(name))      
+        print('Congratulations, {}!'.format(name))

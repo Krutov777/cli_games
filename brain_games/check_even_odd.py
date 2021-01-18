@@ -11,11 +11,15 @@ def even_odd(name):
         print('Question: {}'.format(number))
         answer_input = ''
         answer_input = prompt.string('Your answer: ')
-        if (number % 2 == 0 and answer_input == 'yes') or (number % 2 == 1 and answer_input == 'no'):
+        if number % 2 == 0 and answer_input == 'yes':
+            print('correct')
+            counter_input += 1
+        elif number % 2 == 1 and answer_input == 'no':
             print('correct')
             counter_input += 1
         else:
-            print("'yes' is wrong answer ;(. Correct answer was 'no'.Let's try again, {}!".format(name))
+            print("'yes' is wrong answer ;(. Correct answer was 'no'.")
+            print(" Let's try again, {}!".format(name))
             break
     if counter_input == 3:
         print('Congratulations, {}!'.format(name))

@@ -2,7 +2,6 @@
 import prompt
 import random
 import operator
-from brain_games.cli import welcome_user
 
 
 def calc(name):
@@ -12,8 +11,8 @@ def calc(name):
         number1 = random.randint(1, 100)
         number2 = random.randint(1, 100)
         operations = {"+": operator.add,
-                  "-": operator.sub,
-                  "*": operator.mul}
+                      "-": operator.sub,
+                      "*": operator.mul}
         op = random.choice(list(operations.keys()))
         answer = operations[op](number1, number2)
         expression = f"{number1} {op} {number2}"
@@ -23,7 +22,8 @@ def calc(name):
             print('Correct!')
             counter_input += 1
         else:
-            print("{} is wrong answer ;(. Correct answer was {}.".format(inpt, answer))
+            print("{} is wrong answer ;(.".format(inpt))
+            print(" Correct answer was {}.".format(answer))
             break
     if counter_input == 3:
         print('Congratulations, {}!'.format(name))

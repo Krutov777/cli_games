@@ -6,7 +6,7 @@ brain-even:
 	poetry run brain-even
 brain-calc:
 	poetry run brain-calc
-brain-nod:
+brain-gcd:
 	poetry run brain-nod
 brain-progression:
 	poetry run brain-progression
