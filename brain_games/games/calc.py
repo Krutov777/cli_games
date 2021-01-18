@@ -5,12 +5,6 @@ import operator
 
 
 def check_calculator():
-    """
-    Generates two random integers. Randomly chooses an operator
-    of addition, subtraction or multiplication. Calculates the
-    expression using chosen operator.
-    :return: correct answer and expression
-    """
     number_1 = random.randint(1, 25)
     number_2 = random.randint(1, 25)
     operations = {"+": operator.add,
